@@ -3,10 +3,23 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Makaan - Real Estate HTML Template</title>
+    <title>Makaan Premium Property Gallery | Real Estate</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="real estate gallery, property photos, apartments, villas, luxury homes, Makaan real estate"
+        name="keywords">
+    <meta
+        content="Explore our rich gallery bringing you high-quality photos of premium apartments, luxurious villas, and modern commercial offices. Find your dream property with Makaan."
+        name="description">
+
+    <!-- JSON-LD Structured Data for Image Gallery -->
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "ImageGallery",
+      "name": "Makaan Premium Property Gallery",
+      "description": "A collection of high-quality property pictures including apartments, villas, and commercial real estate."
+    }
+    </script>
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -59,7 +72,7 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
                         <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link active">About</a>
+                        <a href="about.html" class="nav-item nav-link ">About</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Property</a>
                             <div class="dropdown-menu rounded-0 m-0">
@@ -158,54 +171,173 @@
         </div>
         <!-- Search End -->
 
-        <!-- gallery start---->
-
-
-
-        <div class="container-fluid bg-light mb-5 wow fadeIn" data-wow-delay="0.1s" style="padding: 35px;">
-
-
-
-            <div class="row mt-3">
-
-                <div class="col-md-3">
-                    <img src="img/gal1.jpeg" class="img-fluid" alt="Image 1">
+        <!-- Gallery Start -->
+        <div class="container-xxl py-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+                    <h1 class="mb-3">Explore Our Premium Properties</h1>
+                    <p>Discover our wide selection of stunning apartments, elegant villas, and prime commercial spaces.
+                    </p>
                 </div>
 
-                <div class="col-md-3">
-                    <img src="img/g2.png" class="img-fluid" alt="Image 2">
+                <!-- Filters -->
+                <div class="row mb-4">
+                    <div class="col-12 text-center text-md-center">
+                        <ul class="list-inline mb-0 filter-controls" id="gallery-filters">
+                            <li class="list-inline-item m-1 btn btn-outline-primary active" data-filter="all">All
+                                Properties</li>
+                            <li class="list-inline-item m-1 btn btn-outline-primary" data-filter="apartment">Apartments
+                            </li>
+                            <li class="list-inline-item m-1 btn btn-outline-primary" data-filter="villa">Villas</li>
+                            <li class="list-inline-item m-1 btn btn-outline-primary" data-filter="commercial">Commercial
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="col-md-3">
-                    <img src="img/g3.png" class="img-fluid" alt="Image 3">
-                </div>
+                <!-- Gallery Grid -->
+                <div class="row g-4 gallery-grid" id="gallery-container">
 
-                <div class="col-md-3">
-                    <img src="img/g4.png" class="img-fluid" alt="Image 4">
-                </div>
+                    <div class="col-lg-4 col-md-6 gallery-item apartment">
+                        <div class="gallery-card rounded overflow-hidden">
+                            <img src="img/gal1.jpeg" class="img-fluid w-100"
+                                alt="Modern Spacious Apartment Living Room">
+                            <div class="gallery-overlay">
+                                <span class="gallery-category">Apartment</span>
+                                <h5 class="gallery-title">Modern Living Space</h5>
+                                <a href="javascript:void(0)"
+                                    class="btn btn-square btn-light rounded-circle lightbox-trigger"
+                                    data-img="img/gal1.jpeg" data-title="Modern Living Space"><i
+                                        class="fa fa-search-plus text-primary"></i></a>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="col-lg-4 col-md-6 gallery-item villa">
+                        <div class="gallery-card rounded overflow-hidden">
+                            <img src="img/gal2.jpeg" class="img-fluid w-100" alt="Luxurious Villa Exterior With Pool">
+                            <div class="gallery-overlay">
+                                <span class="gallery-category">Villa</span>
+                                <h5 class="gallery-title">Luxury Exterior Pool</h5>
+                                <a href="javascript:void(0)"
+                                    class="btn btn-square btn-light rounded-circle lightbox-trigger"
+                                    data-img="img/gal2.jpeg" data-title="Luxury Exterior Pool"><i
+                                        class="fa fa-search-plus text-primary"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 gallery-item commercial">
+                        <div class="gallery-card rounded overflow-hidden">
+                            <img src="img/gal3.jpeg" class="img-fluid w-100" alt="Prime Commercial Office Space">
+                            <div class="gallery-overlay">
+                                <span class="gallery-category">Commercial</span>
+                                <h5 class="gallery-title">Prime Office Space</h5>
+                                <a href="javascript:void(0)"
+                                    class="btn btn-square btn-light rounded-circle lightbox-trigger"
+                                    data-img="img/gal3.jpeg" data-title="Prime Office Space"><i
+                                        class="fa fa-search-plus text-primary"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 gallery-item apartment">
+                        <div class="gallery-card rounded overflow-hidden">
+                            <img src="img/gal4.jpeg" class="img-fluid w-100" alt="Cozy Apartment Bedroom Interior">
+                            <div class="gallery-overlay">
+                                <span class="gallery-category">Apartment</span>
+                                <h5 class="gallery-title">Cozy Bedroom Design</h5>
+                                <a href="javascript:void(0)"
+                                    class="btn btn-square btn-light rounded-circle lightbox-trigger"
+                                    data-img="img/gal4.jpeg" data-title="Cozy Bedroom Design"><i
+                                        class="fa fa-search-plus text-primary"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 gallery-item villa">
+                        <div class="gallery-card rounded overflow-hidden">
+                            <img src="img/gal5.jpeg" class="img-fluid w-100" alt="Villa Elegant Dining Room">
+                            <div class="gallery-overlay">
+                                <span class="gallery-category">Villa</span>
+                                <h5 class="gallery-title">Elegant Dining Area</h5>
+                                <a href="javascript:void(0)"
+                                    class="btn btn-square btn-light rounded-circle lightbox-trigger"
+                                    data-img="img/gal5.jpeg" data-title="Elegant Dining Area"><i
+                                        class="fa fa-search-plus text-primary"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 gallery-item apartment">
+                        <div class="gallery-card rounded overflow-hidden">
+                            <img src="img/gal12.jpeg" class="img-fluid w-100" alt="Apartment Modern Kitchen Area">
+                            <div class="gallery-overlay">
+                                <span class="gallery-category">Apartment</span>
+                                <h5 class="gallery-title">Modern Kitchen</h5>
+                                <a href="javascript:void(0)"
+                                    class="btn btn-square btn-light rounded-circle lightbox-trigger"
+                                    data-img="img/gal12.jpeg" data-title="Modern Kitchen"><i
+                                        class="fa fa-search-plus text-primary"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 gallery-item commercial">
+                        <div class="gallery-card rounded overflow-hidden">
+                            <img src="img/gal7.jpeg" class="img-fluid w-100" alt="Commercial Building Lobby">
+                            <div class="gallery-overlay">
+                                <span class="gallery-category">Commercial</span>
+                                <h5 class="gallery-title">Building Lobby</h5>
+                                <a href="javascript:void(0)"
+                                    class="btn btn-square btn-light rounded-circle lightbox-trigger"
+                                    data-img="img/gal7.jpeg" data-title="Building Lobby"><i
+                                        class="fa fa-search-plus text-primary"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 gallery-item villa">
+                        <div class="gallery-card rounded overflow-hidden">
+                            <img src="img/gal8.jpeg" class="img-fluid w-100" alt="Spacious Villa Garden">
+                            <div class="gallery-overlay">
+                                <span class="gallery-category">Villa</span>
+                                <h5 class="gallery-title">Spacious Garden</h5>
+                                <a href="javascript:void(0)"
+                                    class="btn btn-square btn-light rounded-circle lightbox-trigger"
+                                    data-img="img/gal8.jpeg" data-title="Spacious Garden"><i
+                                        class="fa fa-search-plus text-primary"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 gallery-item apartment">
+                        <div class="gallery-card rounded overflow-hidden">
+                            <img src="img/gal10.jpeg" class="img-fluid w-100" alt="Balcony View Apartment">
+                            <div class="gallery-overlay">
+                                <span class="gallery-category">Apartment</span>
+                                <h5 class="gallery-title">Balcony Sunset View</h5>
+                                <a href="javascript:void(0)"
+                                    class="btn btn-square btn-light rounded-circle lightbox-trigger"
+                                    data-img="img/gal10.jpeg" data-title="Balcony Sunset View"><i
+                                        class="fa fa-search-plus text-primary"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-            <div class="row mt-3">
-
-                <div class="col-md-3">
-                    <img src="img/gal1.jpeg" class="img-fluid" alt="Image 1">
-                </div>
-
-                <div class="col-md-3">
-                    <img src="img/gal1.jpeg" class="img-fluid" alt="Image 2">
-                </div>
-
-                <div class="col-md-3">
-                    <img src="img/gal1.jpeg" class="img-fluid" alt="Image 3">
-                </div>
-
-                <div class="col-md-3">
-                    <img src="img/gal1.jpeg" class="img-fluid" alt="Image 4">
-                </div>
-
-            </div>
-
         </div>
+
+        <!-- Custom Lightbox Modal -->
+        <div id="custom-lightbox" class="custom-lightbox">
+            <span class="lightbox-close">&times;</span>
+            <div class="lightbox-content">
+                <img id="lightbox-img" src="" alt="Popup Image">
+                <div id="lightbox-caption" class="lightbox-caption"></div>
+            </div>
+        </div>
+        <!-- Gallery End -->
 
 
 
@@ -235,29 +367,6 @@
                         <a class="btn btn-link text-white-50" href="">Our Services</a>
                         <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
                         <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h5 class="text-white mb-4">Photo Gallery</h5>
-                        <div class="row g-2 pt-2">
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/property-1.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/property-2.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/property-3.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/property-4.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/property-5.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/property-6.jpg" alt="">
-                            </div>
-                        </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h5 class="text-white mb-4">Newsletter</h5>
@@ -311,6 +420,43 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <!-- Gallery Specific Script -->
+    <script>
+        $(document).ready(function () {
+            // Gallery Filtering
+            $('#gallery-filters li').on('click', function () {
+                var filterValue = $(this).attr('data-filter');
+
+                $('#gallery-filters li').removeClass('active');
+                $(this).addClass('active');
+
+                if (filterValue === 'all') {
+                    $('.gallery-item').show('1000');
+                } else {
+                    $('.gallery-item').not('.' + filterValue).hide('3000');
+                    $('.gallery-item').filter('.' + filterValue).show('3000');
+                }
+            });
+
+            // Custom Lightbox Logic
+            $('.lightbox-trigger').on('click', function (e) {
+                e.preventDefault();
+                var imageSrc = $(this).attr('data-img');
+                var imageTitle = $(this).attr('data-title');
+
+                $('#lightbox-img').attr('src', imageSrc);
+                $('#lightbox-caption').text(imageTitle);
+                $('#custom-lightbox').fadeIn(300);
+            });
+
+            $('.lightbox-close, .custom-lightbox').on('click', function (e) {
+                if (e.target !== document.getElementById('lightbox-img')) {
+                    $('#custom-lightbox').fadeOut(300);
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
