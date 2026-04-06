@@ -79,3 +79,7 @@
     
 })(jQuery);
 
+/* Custom Navbar Toggler */
+document.querySelector('.navbar-toggler').addEventListener('click', function () {
+    this.classList.toggle('active');
+});
